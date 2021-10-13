@@ -23,7 +23,7 @@ for (let i = 0; i < listMail.length; i++){
 
 console.log(utenteAccesso);
 
-//a seconda del valore con il quale la variabile esce dal ciclo mostro un alert diverso
+//a seconda del valore con il quale la variabile esce dal ciclo mostro un alert diverso 
 if (utenteAccesso === true){
     alert ("la tua e-mail è nella lista, puoi entrare");
 }else {
