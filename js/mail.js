@@ -14,7 +14,7 @@ for (let i = 0; i < listMail.length; i++){
 
 
     
-    //se è vero assegno alla variabile utenteAccesso il valore true
+    //se la condizione è vera assegno alla variabile utenteAccesso il valore true 
     if (currentEMail.toLowerCase() === mailRichiesta.toLowerCase()){
         utenteAccesso = true;
     }
@@ -23,7 +23,7 @@ for (let i = 0; i < listMail.length; i++){
 
 console.log(utenteAccesso);
 
-//se la variabile utenteAccesso esce dal ciclo con valore true (quindi la e-mail dell'utente è presente nella lista) allora mostro questi alert
+//a seconda del valore con il quale la variabile esce dal ciclo mostro un alert diverso
 if (utenteAccesso === true){
     alert ("la tua e-mail è nella lista, puoi entrare");
 }else {
