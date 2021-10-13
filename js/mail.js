@@ -4,16 +4,28 @@ const listMail = ["mario.mario@bros.it", "luigi.mario@bros.it", "wario.mario@bro
 //chiedo all'utente la mail
 const mailRichiesta = prompt("Inserisci l'e-mail");
 
+//assegno una variabile per segnare la possibilità o meno di accesso 
+let utenteAccesso = false;
+
 //con un ciclo for controllo l'array e paragono la mail data dall'utente a quelle dentro l'array
 for (let i = 0; i < listMail.length; i++){
     //associo l'email corrente a una variabile
     const currentEMail = listMail[i];
 
-    //se corrisponde lo faccio entrare altrimenti resta fuori
-    if (mailRichiesta.toLocaleLowerCase() === currentEMail.toLocaleLowerCase()){
-        alert("puoi entrare");
-    }else{
-        alert("la tua e-mail non è presente nella lista, non puoi entrare");
-    }
 
+    
+    //se è vero assegno alla variabile utenteAccesso il valore true
+    if (currentEMail.toLowerCase() === mailRichiesta.toLowerCase()){
+        utenteAccesso = true;
+    }
+        
+}
+
+console.log(utenteAccesso);
+
+//se la variabile utenteAccesso esce dal ciclo con valore true (quindi la e-mail dell'utente è presente nella lista) allora mostro questi alert
+if (utenteAccesso === true){
+    alert ("la tua e-mail è nella lista, puoi entrare");
+}else {
+    alert("la tua e-mail non è nella lista, non puoi entrare");
 }
